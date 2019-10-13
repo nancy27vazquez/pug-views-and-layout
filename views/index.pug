@@ -1,0 +1,31 @@
+extends layout 
+
+block content
+
+    h1 hello #{name} #{lastname} !
+    p Welcome to the #{bootcamp} bootcamp!
+      if lastname || perro
+        p what the fuck happens hereeee!
+          |  This prints whenever I have a lastname key at the object  
+    
+    - var cities = ["México", "Barcelona", "Suiza", "Italia"]
+    ul
+      each city, index in cities
+        li The number #{index} city is #{city}
+      else
+        li there are no cities yet
+
+
+    .cards-container
+      .card(style='width: 18rem;')
+        img.card-img-top(src='http://kenikin.com/w/nba-players-Wallpaper-Full-HD-number-yM1.jpg' alt='Card image cap')
+        .card-body
+          h5.card-title Players
+          p.card-text Check the top NBA players, according to Ironhack Curriculum staff.
+          a.btn.btn-primary(href='/players') See Players
+      .card(style='width: 18rem;')
+        img.card-img-top(src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_OERZ8iocfWup4uRUhjxY_zncbKN02QawHJMqp9qa2RjC6PaI' alt='Card image cap')
+        .card-body
+          h5.card-title Teams
+          p.card-text Here we can check all NBA Teams
+          a.btn.btn-primary(href='/teams') See Teams
